@@ -172,7 +172,7 @@ public class JsonEventTest {
 
         Assert.assertNull(event.getTime());
         event.setTime(1.0);
-        Assert.assertEquals(new Double(1.0), event.getTime());
+        Assert.assertEquals(Double.valueOf(1.0), event.getTime());
 
         event.setEvent("ni");
         Assert.assertEquals("ni", event.getEvent());

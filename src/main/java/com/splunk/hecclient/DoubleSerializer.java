@@ -7,9 +7,10 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /*
- * Copyright 2017 Splunk, Inc..
+ * Copyright 2017-2019 Splunk, Inc..
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +27,7 @@ import java.math.BigDecimal;
 public class DoubleSerializer extends JsonSerializer<Double> {
     @Override
     public void serialize(Double value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonProcessingException {
-        String d = new BigDecimal(value).setScale(6, BigDecimal.ROUND_HALF_UP).toPlainString();
+        String d = new BigDecimal(value).setScale(6, RoundingMode.HALF_UP).toPlainString();
         jgen.writeNumber(d);
     }
 }

@@ -114,7 +114,7 @@ public class HecChannelTest {
         Assert.assertFalse(lhsCh.equals(rhsCh));
 
         Object copy = lhsCh;
-        Assert.assertTrue(lhsCh.equals(copy));
+        Assert.assertEquals(lhsCh, copy);
 
         Assert.assertFalse(lhsCh.equals(null));
         Assert.assertFalse(lhsCh.equals(lhsCh.getId()));

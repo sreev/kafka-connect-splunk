@@ -23,7 +23,6 @@ import org.apache.http.params.*;
 import java.io.IOException;
 import java.util.Locale;
 
-@SuppressWarnings("deprecation")
 public class CloseableHttpResponseMock implements CloseableHttpResponse {
     private StatusLine statusLine;
     private HttpEntity entity;

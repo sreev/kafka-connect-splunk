@@ -25,7 +25,6 @@ import org.apache.http.protocol.HttpContext;
 
 import java.io.IOException;
 
-@SuppressWarnings( "deprecation")
 public class CloseableHttpClientMock extends CloseableHttpClient {
     public static final String success = "{\"text\":\"Success\",\"code\":0,\"ackId\":2}";
     public static final String serverBusy = "{\"text\":\"Server busy\",\"code\":1}";

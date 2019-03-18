@@ -147,7 +147,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
-                <version>2.3</version>
+                <version>2.11.3</version>
             </plugin>
         </plugins>
     </reporting>
@@ -264,7 +264,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <!-- Sets the VM argument line used when unit tests are run. -->
-                    <argLine>${surefireArgLine}</argLine>
+                    <argLine>@{surefireArgLine}</argLine>
                     <!-- Skips unit tests if the value of skip.unit.tests property is true -->
                     <skipTests>${skip.unit.tests}</skipTests>
 
@@ -296,4 +296,5 @@
 
         </plugins>
     </build>
+
 </project>

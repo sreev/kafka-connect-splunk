@@ -32,7 +32,7 @@ public class HecAckPollResponseTest {
         Collection<Long> succeed = resp.getSuccessIds();
         Assert.assertEquals(3, succeed.size());
         for (int i = 1; i < 4; i++) {
-            Assert.assertTrue(succeed.contains(new Long(i)));
+            Assert.assertTrue(succeed.contains(Long.valueOf(i)));
         }
     }
 

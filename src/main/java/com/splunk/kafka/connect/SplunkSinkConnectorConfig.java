@@ -371,7 +371,7 @@ public final class SplunkSinkConnectorConfig extends AbstractConfig {
         } else if (metas.length == expectedLength) {
             return metas[curIdx];
         } else {
-            throw new ConfigException("Invalid " + confKey + " configuration=" + metas);
+            throw new ConfigException("Invalid " + confKey + " configuration=" + Arrays.toString(metas));
         }
     }
 
